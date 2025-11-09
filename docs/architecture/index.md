@@ -1,8 +1,8 @@
-# AltocV2 Fullstack Architecture Document
+# AltoCV Fullstack Architecture Document
 
 ## Table of Contents
 
-- [AltocV2 Fullstack Architecture Document](#table-of-contents)
+- [AltoCV Fullstack Architecture Document](#table-of-contents)
   - [Introduction](./introduction.md)
     - [Starter Template or Existing Project](./introduction.md#starter-template-or-existing-project)
     - [Change Log](./introduction.md#change-log)

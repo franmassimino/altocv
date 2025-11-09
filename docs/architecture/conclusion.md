@@ -1,6 +1,6 @@
 # Conclusion
 
-This architecture document provides a comprehensive blueprint for building AltocV2 as a modern, serverless-first, AI-powered CV platform. The design prioritizes:
+This architecture document provides a comprehensive blueprint for building AltoCV as a modern, serverless-first, AI-powered CV platform. The design prioritizes:
 
 1. **Developer Experience:** Type-safe end-to-end, Server Actions eliminate boilerplate
 2. **Cost Efficiency:** <$50/month operational costs with serverless scale-to-zero

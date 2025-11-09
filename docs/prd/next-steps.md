@@ -3,7 +3,7 @@
 ## UX Expert Prompt
 
 ```
-I have a comprehensive PRD for AltocV2, an AI-powered CV builder with a three-pillar architecture:
+I have a comprehensive PRD for AltoCV, an AI-powered CV builder with a three-pillar architecture:
 conversational AI editor, live preview, and Figma-inspired design panel. The product focuses on
 helping professionals create ATS-optimized CVs through natural conversation, visual customization,
 and smart import/export features.
@@ -27,7 +27,7 @@ solutions over perfection.
 ## Architect Prompt
 
 ```
-I have a comprehensive PRD for AltocV2, an AI-powered CV builder with advanced features including
+I have a comprehensive PRD for AltoCV, an AI-powered CV builder with advanced features including
 conversational editing via Vercel AI SDK, fine-tuned ATS analysis, vector-based job matching,
 and real-time design customization. This is a 3-month solo portfolio project with strict cost
 constraints (<$50/month operational).

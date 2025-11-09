@@ -5,7 +5,7 @@ import Home from "@/app/page";
 describe("Home Page", () => {
   it("renders the main heading", () => {
     render(<Home />);
-    const heading = screen.getByRole("heading", { name: /welcome to altocv2/i });
+    const heading = screen.getByRole("heading", { name: /welcome to altocv/i });
     expect(heading).toBeInTheDocument();
   });
 

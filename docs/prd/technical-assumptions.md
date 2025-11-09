@@ -4,7 +4,7 @@
 
 **Structure**: Single Next.js monorepo with clear separation of concerns
 ```
-altocv2/
+altocv/
 ├── app/              # Next.js 15 App Router pages
 ├── components/       # React components (ui, cv-editor, chat, design-panel)
 ├── lib/              # Utilities, DB client, AI helpers

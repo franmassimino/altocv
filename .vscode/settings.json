@@ -1,0 +1,11 @@
+{
+  "search.useIgnoreFiles": false,
+  "files.exclude": {},
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/out": true,
+    "**/build": true,
+    "**/.vercel": true
+  }
+}

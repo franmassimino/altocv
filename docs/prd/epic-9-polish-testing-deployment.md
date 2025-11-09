@@ -84,7 +84,7 @@ I want **the application deployed to production with comprehensive monitoring**,
 so that **I can detect and resolve issues proactively**.
 
 **Acceptance Criteria**:
-1. Production domain configured with custom domain (e.g., altocv2.com)
+1. Production domain configured with custom domain (e.g., altocv.com)
 2. HTTPS enabled with automatic certificate renewal
 3. Environment variables verified in Vercel production environment
 4. Database migrations applied to production database

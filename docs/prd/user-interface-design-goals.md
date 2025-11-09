@@ -2,7 +2,7 @@
 
 ## Overall UX Vision
 
-AltocV2 should feel like a **conversation with an expert career coach meets a professional design tool**, not a traditional form-filling experience. The interface combines three equal pillars: (1) conversational AI that modifies content in real-time, (2) elegant live preview that reflects changes instantly, and (3) visual design editor for fine-tuning aesthetics. Users should experience a "magic moment" when they see the AI modify their CV in real-time as they chat, then seamlessly switch to adjusting design variables like colors, fonts, and spacing with Figma-like elegance. The design prioritizes **speed, clarity, and creative control**: minimal clicks to value, instant feedback, and zero confusion about what's happening. The aesthetic is **modern, clean, and trustworthy** - this is a professional tool handling career-critical content.
+AltoCV should feel like a **conversation with an expert career coach meets a professional design tool**, not a traditional form-filling experience. The interface combines three equal pillars: (1) conversational AI that modifies content in real-time, (2) elegant live preview that reflects changes instantly, and (3) visual design editor for fine-tuning aesthetics. Users should experience a "magic moment" when they see the AI modify their CV in real-time as they chat, then seamlessly switch to adjusting design variables like colors, fonts, and spacing with Figma-like elegance. The design prioritizes **speed, clarity, and creative control**: minimal clicks to value, instant feedback, and zero confusion about what's happening. The aesthetic is **modern, clean, and trustworthy** - this is a professional tool handling career-critical content.
 
 ## Key Interaction Paradigms
 
@@ -46,7 +46,7 @@ AltocV2 should feel like a **conversation with an expert career coach meets a pr
 
 ## Accessibility: WCAG AA
 
-AltocV2 will target **WCAG 2.1 Level AA compliance** to ensure professional accessibility without over-engineering for a portfolio MVP. This includes: keyboard navigation for all interactive elements, sufficient color contrast ratios (4.5:1 for text), screen reader compatible labels and ARIA attributes, focus indicators on all focusable elements, responsive text sizing, and accessible color picker with contrast validation.
+AltoCV will target **WCAG 2.1 Level AA compliance** to ensure professional accessibility without over-engineering for a portfolio MVP. This includes: keyboard navigation for all interactive elements, sufficient color contrast ratios (4.5:1 for text), screen reader compatible labels and ARIA attributes, focus indicators on all focusable elements, responsive text sizing, and accessible color picker with contrast validation.
 
 **Assumption**: Given the 3-month timeline and solo development, full AAA compliance or extensive testing with assistive technologies is out of scope. Design panel controls must be keyboard-accessible but may not have perfect screen reader experience initially.
 

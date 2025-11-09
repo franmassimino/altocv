@@ -11,7 +11,7 @@
 | Environment | URL | Purpose |
 |-------------|-----|---------|
 | Development | localhost:3000 | Local dev |
-| Staging | altocv2-staging.vercel.app | Testing |
-| Production | altocv2.com | Live |
+| Staging | altocv-staging.vercel.app | Testing |
+| Production | altocv.com | Live |
 
 ---

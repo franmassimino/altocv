@@ -1,5 +1,5 @@
 {
-  "name": "altocv2",
+  "name": "altocv",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,9 +12,11 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
     "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "test:e2e:ui": "playwright test --ui",
+    "test:db": "dotenv -e .env.local -- tsx scripts/test-db.ts"
   },
   "dependencies": {
+    "@prisma/client": "^6.19.0",
     "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -32,13 +34,16 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^4.7.0",
+    "dotenv-cli": "^11.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
     "eslint-config-prettier": "^10.1.8",
     "happy-dom": "^20.0.10",
     "jsdom": "^25.0.1",
     "prettier": "^3.6.2",
+    "prisma": "^6.19.0",
     "tailwindcss": "^4",
+    "tsx": "^4.20.6",
     "typescript": "^5",
     "vitest": "^4.0.8"
   }

@@ -1,10 +1,10 @@
-# AltocV2 UI/UX Specification
+# AltoCV UI/UX Specification
 
 ## Introduction
 
-This document defines the user experience goals, information architecture, user flows, and visual design specifications for AltocV2's user interface. It serves as the foundation for visual design and frontend development, ensuring a cohesive and user-centered experience.
+This document defines the user experience goals, information architecture, user flows, and visual design specifications for AltoCV's user interface. It serves as the foundation for visual design and frontend development, ensuring a cohesive and user-centered experience.
 
-AltocV2 is an AI-powered CV creation and adaptation platform that addresses a critical pain point: 75% of CVs never reach human eyes due to ATS (Applicant Tracking System) rejection. The platform combines three equal pillars: (1) conversational AI that modifies content in real-time, (2) elegant live preview that reflects changes instantly, and (3) visual design editor for fine-tuning aesthetics.
+AltoCV is an AI-powered CV creation and adaptation platform that addresses a critical pain point: 75% of CVs never reach human eyes due to ATS (Applicant Tracking System) rejection. The platform combines three equal pillars: (1) conversational AI that modifies content in real-time, (2) elegant live preview that reflects changes instantly, and (3) visual design editor for fine-tuning aesthetics.
 
 ### Overall UX Goals & Principles
 

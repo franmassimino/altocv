@@ -1,7 +1,7 @@
 # Unified Project Structure
 
 ```
-altocv2/
+altocv/
 ├── app/                          # Next.js App Router
 ├── components/                   # React components
 ├── lib/                          # Shared utilities

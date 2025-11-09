@@ -1,4 +1,4 @@
-# Project Brief: AltocV2
+# Project Brief: AltoCV
 
 **Version**: 1.0
 **Date**: 2025-01-09
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-AltocV2 is a web platform that revolutionizes CV creation and adaptation through a conversational AI assistant that understands how hiring systems actually work. Unlike traditional editors, AltocV2 combines an integrated chat that edits in real-time, ATS analysis based on real data, intelligent import from LinkedIn and job postings, advanced tone/style personalization, and industry-specialized visual templates.
+AltoCV is a web platform that revolutionizes CV creation and adaptation through a conversational AI assistant that understands how hiring systems actually work. Unlike traditional editors, AltoCV combines an integrated chat that edits in real-time, ATS analysis based on real data, intelligent import from LinkedIn and job postings, advanced tone/style personalization, and industry-specialized visual templates.
 
 **The main problem it solves:** (1) friction and time wasted manually adapting CVs, (2) difficulty articulating experience effectively, (3) the "black hole" of not knowing if your CV will pass ATS filters, and (4) the disconnect between LinkedIn profiles, existing CVs, and new applications.
 
@@ -99,7 +99,7 @@ AltocV2 is a web platform that revolutionizes CV creation and adaptation through
 
 ### Core Concept
 
-AltocV2 is a **career conversational assistant** that combines the fluidity of AI chat, the reliability of a professional editor, and the intelligence of specialized recruitment systems. It's not just a CV editor - it's your personal coach that understands both your professional story and the systems that will evaluate your CV.
+AltoCV is a **career conversational assistant** that combines the fluidity of AI chat, the reliability of a professional editor, and the intelligence of specialized recruitment systems. It's not just a CV editor - it's your personal coach that understands both your professional story and the systems that will evaluate your CV.
 
 ### Solution Approach
 
@@ -166,7 +166,7 @@ Modern Notion-style experience:
 
 **Solves the complete problem, not just a part:**
 - Other tools help with format OR content OR analysis
-- AltocV2 integrates everything into one coherent workflow
+- AltoCV integrates everything into one coherent workflow
 - Reduces from 4-5 tools to just one
 
 ---
@@ -493,7 +493,7 @@ Modern Notion-style experience:
 
 ### Long-Term Vision (1-2 years)
 
-**AltocV2 becomes "Career OS"** - Operating system for your professional career:
+**AltoCV becomes "Career OS"** - Operating system for your professional career:
 - Central hub for all professional identity
 - Data portability (owned by you)
 - AI personal agent
@@ -545,7 +545,7 @@ Modern Notion-style experience:
 
 **Repository Structure**: Monorepo
 ```
-altocv2/
+altocv/
 ├── app/              # Next.js App Router
 ├── components/       # React components
 ├── lib/              # Utilities, DB client
@@ -640,7 +640,7 @@ altocv2/
 
 ## Summary
 
-**AltocV2** is a technically ambitious portfolio project that demonstrates:
+**AltoCV** is a technically ambitious portfolio project that demonstrates:
 - Modern full-stack development (Next.js 15, TypeScript, Prisma)
 - AI/ML integration (LLMs, fine-tuning, embeddings)
 - Payment systems (Stripe, webhooks)
