@@ -20,7 +20,7 @@ AltoCV is a modern CV builder that combines **three powerful pillars** to revolu
 2. **Live Visual Preview** - See changes instantly with professional, customizable templates
 3. **Design Panel** - Fine-tune colors, fonts, and spacing with Figma-inspired controls
 
-Unlike traditional CV builders, AltocV2 understands what Applicant Tracking Systems (ATS) look for and helps you create CVs that pass automated screening while maintaining professional design.
+Unlike traditional CV builders, AltoCV understands what Applicant Tracking Systems (ATS) look for and helps you create CVs that pass automated screening while maintaining professional design.
 
 ## Features
 
