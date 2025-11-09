@@ -2,49 +2,49 @@
 
 # 🚀 AltoCV
 
-**Tu Asistente Profesional Impulsado por IA para la Creación de CV**
+**Your AI-Powered Career Coach for CV Creation**
 
-Construye, personaliza y optimiza tu currículum vitae con IA conversacional, vista previa en vivo y análisis inteligente de ATS.
+Build, customize, and optimize your CV with conversational AI, live preview, and intelligent ATS analysis.
 
-[Demo](#) • [Documentación](docs/) • [Contribuir](#contributing)
+[Demo](#) • [Documentation](docs/) • [Contributing](#contributing)
 
 ---
 
 </div>
 
-## 💡 ¿Qué es AltoCV?
+## 💡 What is AltoCV?
 
-AltoCV es un constructor de CV moderno que combina **tres pilares poderosos** para revolucionar la forma en que creas y adaptas tu currículum:
+AltoCV is a modern CV builder that combines **three powerful pillars** to revolutionize how you create and adapt your resume:
 
-1.  **✍️ Editor de IA Conversacional** - Chatea de forma natural con un asistente de IA que edita tu CV en tiempo real
-2.  **👀 Vista Previa Visual en Vivo** - Observa los cambios al instante con plantillas profesionales y personalizables
-3.  **🎨 Panel de Diseño** - Ajusta colores, fuentes y espaciado con controles inspirados en Figma
+1.  **✍️ Conversational AI Editor** - Chat naturally with an AI assistant that edits your CV in real-time
+2.  **👀 Live Visual Preview** - See changes instantly with professional, customizable templates
+3.  **🎨 Design Panel** - Fine-tune colors, fonts, and spacing with Figma-inspired controls
 
-A diferencia de los constructores de CV tradicionales, AltocV2 entiende lo que buscan los Applicant Tracking Systems (ATS) y te ayuda a crear CVs que pasan la detección automatizada mientras mantienen un diseño profesional.
+Unlike traditional CV builders, AltocV2 understands what Applicant Tracking Systems (ATS) look for and helps you create CVs that pass automated screening while maintaining professional design.
 
-## ✨ Características Principales
+## ✨ Core Features
 
-### 🛠️ Capacidades Centrales
+### 🛠️ Core Capabilities
 
-* **Edición Impulsada por IA** - Interfaz conversacional que utiliza Vercel AI SDK con respuestas de streaming
-* **Plantillas Inteligentes** - Plantillas optimizadas para la industria (Tech, Corporativo, Creativo) con personalización total
-* **Análisis ATS** - Motor de IA ajustado que identifica problemas de compatibilidad y sugiere correcciones
-* **Importación Inteligente** - Analiza CVs existentes desde PDF o exportaciones de LinkedIn
-* **Emparejamiento de Empleos** - Puntuación de compatibilidad basada en vectores entre tu CV y las ofertas de trabajo
-* **Diseño en Tiempo Real** - Actualizaciones visuales instantáneas al personalizar colores, fuentes y espaciado
-* **Guardado Automático** - Nunca pierdas tu trabajo con la sincronización continua en la nube
-* **Exportación Multi-formato** - Formatos PDF, DOCX y texto plano amigables con ATS
+* **AI-Powered Editing** - Conversational interface using Vercel AI SDK with streaming responses
+* **Smart Templates** - Industry-optimized templates (Tech, Corporate, Creative) with full customization
+* **ATS Analysis** - Fine-tuned AI engine that identifies compatibility issues and suggests fixes
+* **Intelligent Import** - Parse existing CVs from PDF or LinkedIn exports
+* **Job Matching** - Vector-based compatibility scoring between your CV and job postings
+* **Real-time Design** - Instant visual updates as you customize colors, fonts, and spacing
+* **Auto-save** - Never lose your work with continuous cloud synchronization
+* **Multi-format Export** - ATS-friendly PDF, DOCX, and plain text formats
 
-### 💻 Aspectos Técnicos Destacados
+### 💻 Tech Highlights
 
-* Construido con **Next.js 15** (App Router, React Server Components)
-* **Generative UI** con Vercel AI SDK para componentes de IA interactivos
-* **Sistema basado en créditos** con integración de Stripe para la monetización
-* **Embeddings vectoriales** utilizando `pgvector` para el emparejamiento semántico de trabajos
-* **Type-safe** con TypeScript en modo estricto y validación Zod
-* **Diseño Responsivo** con Tailwind CSS y componentes `shadcn/ui`
+* Built with **Next.js 15** (App Router, React Server Components)
+* **Generative UI** with Vercel AI SDK for interactive AI components
+* **Credit-based system** with Stripe integration for monetization
+* **Vector embeddings** using `pgvector` for semantic job matching
+* **Type-safe** with TypeScript strict mode and Zod validation
+* **Responsive design** with Tailwind CSS and `shadcn/ui` components
 
-## ⚙️ Pila Tecnológica (Tech Stack)
+## ⚙️ Tech Stack
 
 ### Frontend
 * Next.js 15 (App Router)
@@ -53,7 +53,7 @@ A diferencia de los constructores de CV tradicionales, AltocV2 entiende lo que b
 * Zustand + TanStack Query
 * Framer Motion
 
-### Backend & Datos
+### Backend & Data
 * PostgreSQL (Neon Serverless)
 * Prisma ORM
 * NextAuth.js v5
@@ -66,114 +66,196 @@ A diferencia de los constructores de CV tradicionales, AltocV2 entiende lo que b
 * Anthropic (Claude 3.5)
 * Supabase `pgvector`
 
-### Infraestructura
+### Infrastructure
 * Vercel (hosting)
-* Stripe (pagos)
-* Sentry (monitoreo)
-* PostHog (analíticas)
+* Stripe (payments)
+* Sentry (monitoring)
+* PostHog (analytics)
 
 ---
 
-## 🚀 Empezando
+## 🚀 Getting Started
 
-###  Voraussetzungen (Requisitos Previos)
+### Prerequisites
 
-* Node.js 18+ y npm/pnpm/yarn
-* Base de datos PostgreSQL (recomendamos [Neon](https://neon.tech) para serverless)
-* Claves API para OpenAI y/o Anthropic
-* Cuenta de Stripe (para las funcionalidades de pago)
+* Node.js 18+ and npm/pnpm/yarn
+* PostgreSQL database (we recommend [Neon](https://neon.tech) for serverless)
+* API keys for OpenAI and/or Anthropic
+* Stripe account (for payment features)
 
-### Instalación
+## Getting Started
 
-1.  **Clonar el repositorio**
-    ```bash
-    git clone [https://github.com/yourusername/altocv.git](https://github.com/yourusername/altocv.git)
-    cd altocv
-    ```
+### Prerequisites
 
-2.  **Instalar dependencias**
-    ```bash
-    npm install
-    ```
+- Node.js 18+ and npm/pnpm/yarn
+- PostgreSQL database (we recommend [Neon](https://neon.tech) for serverless)
+- API keys for OpenAI and/or Anthropic
+- Stripe account (for payment features)
 
-3.  **Configurar variables de entorno**
+### Installation
 
-    Copiar el archivo de entorno de ejemplo:
-    ```bash
-    cp .env.example .env.local
-    ```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/altocv.git
+   cd altocv
+   ```
 
-    Rellenar las variables de entorno en `.env.local`:
-    ```bash
-    # Database - Use your own database name
-    DATABASE_URL=postgresql://user:password@localhost:5432/your_database_name
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-    # Auth - Generate your own secret
-    NEXTAUTH_SECRET=your-unique-secret-key-here
-    NEXTAUTH_URL=http://localhost:3000
+3. **Set up environment variables**
 
-    # OAuth providers (optional)
-    GOOGLE_CLIENT_ID=your-google-client-id
-    GOOGLE_CLIENT_SECRET=your-google-client-secret
+   Copy the example environment file:
+   ```bash
+   cp .env.example .env.local
+   ```
 
-    # AI APIs (choose at least one)
-    OPENAI_API_KEY=sk-...
-    ANTHROPIC_API_KEY=sk-ant-...
+   Fill in your environment variables in `.env.local`:
+   ```bash
+   # Database - Use your own database name
+   DATABASE_URL=postgresql://user:password@localhost:5432/your_database_name
 
-    # Payment (optional for MVP)
-    STRIPE_SECRET_KEY=sk_test_...
-    STRIPE_WEBHOOK_SECRET=whsec_...
+   # Auth - Generate your own secret
+   NEXTAUTH_SECRET=your-unique-secret-key-here
+   NEXTAUTH_URL=http://localhost:3000
 
-    # Storage (optional)
-    BLOB_READ_WRITE_TOKEN=vercel_blob_...
+   # OAuth providers (optional)
+   GOOGLE_CLIENT_ID=your-google-client-id
+   GOOGLE_CLIENT_SECRET=your-google-client-secret
 
-    # Monitoring (optional)
-    SENTRY_DSN=https://...
-    NEXT_PUBLIC_POSTHOG_KEY=phc_...
-    ```
+   # AI APIs (choose at least one)
+   OPENAI_API_KEY=sk-...
+   ANTHROPIC_API_KEY=sk-ant-...
 
-    **⚠️ Importante**:
-    - Reemplaza `your_database_name` con tu nombre de base de datos único
-    - Genera una cadena aleatoria segura para `NEXTAUTH_SECRET`
-    - **Nunca** subas `.env.local` al control de versiones
+   # Payment (optional for MVP)
+   STRIPE_SECRET_KEY=sk_test_...
+   STRIPE_WEBHOOK_SECRET=whsec_...
 
-4.  **Configurar la base de datos**
-    ```bash
-    # Generar Prisma Client
-    npx prisma generate
+   # Storage (optional)
+   BLOB_READ_WRITE_TOKEN=vercel_blob_...
 
-    # Ejecutar migraciones
-    npx dotenv -e .env.local -- prisma migrate dev
+   # Monitoring (optional)
+   SENTRY_DSN=https://...
+   NEXT_PUBLIC_POSTHOG_KEY=phc_...
+   ```
 
-    # Probar la conexión a la base de datos (opcional)
-    npm run test:db
-    ```
+   **Important**:
+   - Replace `your_database_name` with your own unique database name
+   - Generate a secure random string for `NEXTAUTH_SECRET`
+   - Never commit `.env.local` to version control
 
-5.  **Iniciar el servidor de desarrollo**
-    ```bash
-    npm run dev
-    ```
+4. **Set up the database**
+   ```bash
+   # Generate Prisma Client
+   npx prisma generate
 
-    Abrir [http://localhost:3000](http://localhost:3000) en tu navegador.
+   # Run migrations
+   npx dotenv -e .env.local -- prisma migrate dev
 
-### ⌨️ Comandos de Desarrollo
+   # Test database connection (optional)
+   npm run test:db
+   ```
+
+5. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Development Commands
 
 ```bash
-# Desarrollo
-npm run dev           # Iniciar servidor de desarrollo
-npm run build         # Compilar para producción
-npm run start         # Iniciar servidor de producción
+# Development
+npm run dev              # Start dev server
+npm run build           # Build for production
+npm run start           # Start production server
 
-# Base de Datos
-npx prisma generate   # Generar Prisma Client
-npx prisma studio     # Abrir GUI de la base de datos
-npx prisma migrate dev# Crear y aplicar migración
+# Database
+npx prisma generate     # Generate Prisma Client
+npx prisma studio       # Open database GUI
+npx prisma migrate dev  # Create and apply migration
 
-# Pruebas
-npm test              # Ejecutar pruebas unitarias
-npm run test:ui       # Ejecutar pruebas con UI
-npm run test:e2e      # Ejecutar pruebas E2E
+# Testing
+npm test                # Run unit tests
+npm run test:ui         # Run tests with UI
+npm run test:e2e        # Run E2E tests
 
-# Calidad del Código
-npm run lint          # Ejecutar ESLint
-npm run format        # Formatear con Prettier
+# Code Quality
+npm run lint            # Run ESLint
+npm run format          # Format with Prettier
+```
+
+## Project Structure
+
+```
+altocv/
+├── app/              # Next.js App Router pages
+├── components/       # React components
+│   ├── ui/          # shadcn/ui components
+│   ├── cv-editor/   # CV editing components
+│   ├── chat/        # AI chat interface
+│   └── design-panel/# Design customization controls
+├── lib/             # Utilities and helpers
+│   ├── db.ts        # Prisma client
+│   ├── ai/          # AI SDK integration
+│   └── utils.ts     # Shared utilities
+├── server/          # Server-only code
+│   ├── actions/     # Server Actions
+│   └── api/         # API route handlers
+├── prisma/          # Database schema and migrations
+└── public/          # Static assets
+```
+
+## Documentation
+
+- [Project Brief](docs/brief.md) - Overview and vision
+- [PRD](docs/prd.md) - Detailed product requirements
+- [Architecture](docs/architecture.md) - Technical architecture
+- [Stories](docs/stories/) - User stories and epics
+
+## Contributing
+
+We welcome contributions! This project is open source to help others learn and build similar applications.
+
+### How to Contribute
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Run tests and linting (`npm test && npm run lint`)
+5. Commit your changes (`git commit -m 'Add amazing feature'`)
+6. Push to the branch (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+### Development Guidelines
+
+- Follow the existing code style
+- Write meaningful commit messages
+- Add tests for new features
+- Update documentation as needed
+- Ensure all tests pass before submitting PR
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Built with [Next.js](https://nextjs.org)
+- UI components from [shadcn/ui](https://ui.shadcn.com)
+- AI integration powered by [Vercel AI SDK](https://sdk.vercel.ai)
+- Database hosted on [Neon](https://neon.tech)
+
+---
+
+<div align="center">
+
+**Built with passion to help professionals create better CVs**
+
+[Report Bug](https://github.com/yourusername/altocv/issues) • [Request Feature](https://github.com/yourusername/altocv/issues)
+
+</div>
+
