@@ -1,6 +1,6 @@
 # API Specification
 
-AltocV2 uses a **hybrid API approach**: **95% Server Actions** (type-safe RPC) for internal frontend-backend communication, and **5% REST API routes** for external webhooks (Stripe).
+AltoCV uses a **hybrid API approach**: **95% Server Actions** (type-safe RPC) for internal frontend-backend communication, and **5% REST API routes** for external webhooks (Stripe).
 
 ## Server Actions Specification
 

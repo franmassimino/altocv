@@ -13,9 +13,9 @@ Based on your Project Brief, here are the key desired outcomes for this PRD:
 
 ## Background Context
 
-AltocV2 addresses a critical pain point in the modern job search: the fragmented, time-intensive process of creating and adapting CVs that pass Applicant Tracking Systems (ATS). Currently, 75% of CVs never reach human eyes due to automatic rejection, and professionals waste 15-20 hours per month manually adapting their CVs for different roles without knowing if they're using the right keywords or format.
+AltoCV addresses a critical pain point in the modern job search: the fragmented, time-intensive process of creating and adapting CVs that pass Applicant Tracking Systems (ATS). Currently, 75% of CVs never reach human eyes due to automatic rejection, and professionals waste 15-20 hours per month manually adapting their CVs for different roles without knowing if they're using the right keywords or format.
 
-Traditional CV builders offer pretty templates but no intelligence about content or ATS optimization. AI tools like ChatGPT require complex prompts and aren't integrated into the editing workflow. AltocV2 bridges this gap by combining conversational AI that edits in real-time, ATS analysis trained on real data, intelligent import from LinkedIn/PDFs, and industry-specialized templates. This is a 3-month portfolio project demonstrating competence in modern AI-powered SaaS development, with the dual benefit of creating a tool that solves a real problem you personally experience.
+Traditional CV builders offer pretty templates but no intelligence about content or ATS optimization. AI tools like ChatGPT require complex prompts and aren't integrated into the editing workflow. AltoCV bridges this gap by combining conversational AI that edits in real-time, ATS analysis trained on real data, intelligent import from LinkedIn/PDFs, and industry-specialized templates. This is a 3-month portfolio project demonstrating competence in modern AI-powered SaaS development, with the dual benefit of creating a tool that solves a real problem you personally experience.
 
 ## Change Log
 

@@ -90,7 +90,7 @@ so that **I can decide if Pro subscription is worth the investment**.
 4. CTA buttons: "Get Started" (Free), "Upgrade to Pro" (Pro)
 5. FAQ section answers common questions (refunds, cancellation, credit rollover)
 6. Pricing displayed with annual option (save 20%): $9.99/month or $95.88/year
-7. Social proof: "Join 500+ professionals using AltocV2" (update number dynamically)
+7. Social proof: "Join 500+ professionals using AltoCV" (update number dynamically)
 
 ## Story 8.7: Add Credit Usage Analytics Dashboard
 

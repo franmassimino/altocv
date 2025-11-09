@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AltocV2 - AI-Powered CV Builder",
+  title: "AltoCV - AI-Powered CV Builder",
   description: "Build ATS-friendly CVs with AI assistance",
 };
 

@@ -1,8 +1,8 @@
-# AltocV2 Product Requirements Document (PRD)
+# AltoCV Product Requirements Document (PRD)
 
 ## Table of Contents
 
-- [AltocV2 Product Requirements Document (PRD)](#table-of-contents)
+- [AltoCV Product Requirements Document (PRD)](#table-of-contents)
   - [Goals and Background Context](./goals-and-background-context.md)
     - [Goals](./goals-and-background-context.md#goals)
     - [Background Context](./goals-and-background-context.md#background-context)

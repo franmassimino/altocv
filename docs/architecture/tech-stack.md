@@ -1,6 +1,6 @@
 # Tech Stack
 
-This is the **definitive technology selection** for the entire AltocV2 project. All development must use these exact versions and tools.
+This is the **definitive technology selection** for the entire AltoCV project. All development must use these exact versions and tools.
 
 ## Technology Stack Table
 

@@ -1,6 +1,6 @@
 # Epic 1: Foundation & Core Infrastructure
 
-**Goal**: Establish the technical foundation for AltocV2 by setting up Next.js 15 project with authentication, database, CI/CD pipeline, and core data models. This epic delivers a deployed application with user registration, a basic dashboard, and verified infrastructure that supports future feature development.
+**Goal**: Establish the technical foundation for AltoCV by setting up Next.js 15 project with authentication, database, CI/CD pipeline, and core data models. This epic delivers a deployed application with user registration, a basic dashboard, and verified infrastructure that supports future feature development.
 
 ## Story 1.1: Initialize Next.js 15 Project with TypeScript
 

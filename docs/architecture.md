@@ -1,4 +1,4 @@
-# AltocV2 Fullstack Architecture Document
+# AltoCV Fullstack Architecture Document
 
 **Version**: 1.0
 **Date**: 2025-01-09
@@ -8,7 +8,7 @@
 
 ## Introduction
 
-This document outlines the complete fullstack architecture for AltocV2, including backend systems, frontend implementation, and their integration. It serves as the single source of truth for AI-driven development, ensuring consistency across the entire technology stack.
+This document outlines the complete fullstack architecture for AltoCV, including backend systems, frontend implementation, and their integration. It serves as the single source of truth for AI-driven development, ensuring consistency across the entire technology stack.
 
 This unified approach combines what would traditionally be separate backend and frontend architecture documents, streamlining the development process for modern fullstack applications where these concerns are increasingly intertwined.
 
@@ -44,7 +44,7 @@ This aligns with your tech preferences from the PRD (shadcn/ui for 90% of UI com
 
 ### Technical Summary
 
-AltocV2 is a **serverless-first, edge-optimized Next.js 15 monolith** deployed on Vercel's platform. The architecture leverages React Server Components (RSC) for initial page loads, Server Actions for mutations, and Edge Middleware for global auth/rate-limiting. The frontend combines a three-pillar interface (AI Chat + Live Preview + Design Panel) built with React 18, shadcn/ui, and Zustand for client state. The backend uses serverless functions for API routes and background jobs (Trigger.dev/Inngest) for heavy operations like PDF generation and ATS analysis. Data persistence is handled by PostgreSQL (Neon serverless) with Prisma ORM, while Upstash Redis provides caching and session storage. The AI layer integrates OpenAI and Anthropic models via the Vercel AI SDK with advanced features like tool calling, streaming responses, and generative UI (RSC-based). Vector embeddings (Supabase pgvector) enable job matching via cosine similarity. Stripe manages payments with webhook-based subscription sync. The entire stack prioritizes cost efficiency (<$50/month operational), developer experience (type-safe end-to-end with TypeScript + Zod), and rapid iteration (auto-deployments on git push).
+AltoCV is a **serverless-first, edge-optimized Next.js 15 monolith** deployed on Vercel's platform. The architecture leverages React Server Components (RSC) for initial page loads, Server Actions for mutations, and Edge Middleware for global auth/rate-limiting. The frontend combines a three-pillar interface (AI Chat + Live Preview + Design Panel) built with React 18, shadcn/ui, and Zustand for client state. The backend uses serverless functions for API routes and background jobs (Trigger.dev/Inngest) for heavy operations like PDF generation and ATS analysis. Data persistence is handled by PostgreSQL (Neon serverless) with Prisma ORM, while Upstash Redis provides caching and session storage. The AI layer integrates OpenAI and Anthropic models via the Vercel AI SDK with advanced features like tool calling, streaming responses, and generative UI (RSC-based). Vector embeddings (Supabase pgvector) enable job matching via cosine similarity. Stripe manages payments with webhook-based subscription sync. The entire stack prioritizes cost efficiency (<$50/month operational), developer experience (type-safe end-to-end with TypeScript + Zod), and rapid iteration (auto-deployments on git push).
 
 ### Platform and Infrastructure Choice
 
@@ -83,7 +83,7 @@ AltocV2 is a **serverless-first, edge-optimized Next.js 15 monolith** deployed o
 
 **Package Organization:**
 ```
-altocv2/                          # Root monorepo
+altocv/                          # Root monorepo
 ├── app/                          # Next.js 15 App Router (frontend + backend co-located)
 ├── components/                   # React components
 ├── lib/                          # Shared utilities (frontend + backend)
@@ -188,7 +188,7 @@ graph TB
 
 ## Tech Stack
 
-This is the **definitive technology selection** for the entire AltocV2 project. All development must use these exact versions and tools.
+This is the **definitive technology selection** for the entire AltoCV project. All development must use these exact versions and tools.
 
 ### Technology Stack Table
 
@@ -366,7 +366,7 @@ See full Prisma schema below for complete definitions of:
 
 ## API Specification
 
-AltocV2 uses a **hybrid API approach**: **95% Server Actions** (type-safe RPC) for internal frontend-backend communication, and **5% REST API routes** for external webhooks (Stripe).
+AltoCV uses a **hybrid API approach**: **95% Server Actions** (type-safe RPC) for internal frontend-backend communication, and **5% REST API routes** for external webhooks (Stripe).
 
 ### Server Actions Specification
 
@@ -790,7 +790,7 @@ NextAuth v5 with Google OAuth, JWT strategy, Edge Middleware for route protectio
 ## Unified Project Structure
 
 ```
-altocv2/
+altocv/
 ├── app/                          # Next.js App Router
 ├── components/                   # React components
 ├── lib/                          # Shared utilities
@@ -883,8 +883,8 @@ NEXT_PUBLIC_POSTHOG_KEY=...
 | Environment | URL | Purpose |
 |-------------|-----|---------|
 | Development | localhost:3000 | Local dev |
-| Staging | altocv2-staging.vercel.app | Testing |
-| Production | altocv2.com | Live |
+| Staging | altocv-staging.vercel.app | Testing |
+| Production | altocv.com | Live |
 
 ---
 
@@ -982,7 +982,7 @@ Frontend displays user-friendly toast notifications.
 
 ## Conclusion
 
-This architecture document provides a comprehensive blueprint for building AltocV2 as a modern, serverless-first, AI-powered CV platform. The design prioritizes:
+This architecture document provides a comprehensive blueprint for building AltoCV as a modern, serverless-first, AI-powered CV platform. The design prioritizes:
 
 1. **Developer Experience:** Type-safe end-to-end, Server Actions eliminate boilerplate
 2. **Cost Efficiency:** <$50/month operational costs with serverless scale-to-zero

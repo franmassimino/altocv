@@ -1,4 +1,4 @@
-# AltocV2 Product Requirements Document (PRD)
+# AltoCV Product Requirements Document (PRD)
 
 **Version**: 1.0
 **Date**: 2025-01-09
@@ -22,9 +22,9 @@ Based on your Project Brief, here are the key desired outcomes for this PRD:
 
 ### Background Context
 
-AltocV2 addresses a critical pain point in the modern job search: the fragmented, time-intensive process of creating and adapting CVs that pass Applicant Tracking Systems (ATS). Currently, 75% of CVs never reach human eyes due to automatic rejection, and professionals waste 15-20 hours per month manually adapting their CVs for different roles without knowing if they're using the right keywords or format.
+AltoCV addresses a critical pain point in the modern job search: the fragmented, time-intensive process of creating and adapting CVs that pass Applicant Tracking Systems (ATS). Currently, 75% of CVs never reach human eyes due to automatic rejection, and professionals waste 15-20 hours per month manually adapting their CVs for different roles without knowing if they're using the right keywords or format.
 
-Traditional CV builders offer pretty templates but no intelligence about content or ATS optimization. AI tools like ChatGPT require complex prompts and aren't integrated into the editing workflow. AltocV2 bridges this gap by combining conversational AI that edits in real-time, ATS analysis trained on real data, intelligent import from LinkedIn/PDFs, and industry-specialized templates. This is a 3-month portfolio project demonstrating competence in modern AI-powered SaaS development, with the dual benefit of creating a tool that solves a real problem you personally experience.
+Traditional CV builders offer pretty templates but no intelligence about content or ATS optimization. AI tools like ChatGPT require complex prompts and aren't integrated into the editing workflow. AltoCV bridges this gap by combining conversational AI that edits in real-time, ATS analysis trained on real data, intelligent import from LinkedIn/PDFs, and industry-specialized templates. This is a 3-month portfolio project demonstrating competence in modern AI-powered SaaS development, with the dual benefit of creating a tool that solves a real problem you personally experience.
 
 ### Change Log
 
@@ -116,7 +116,7 @@ Traditional CV builders offer pretty templates but no intelligence about content
 
 ### Overall UX Vision
 
-AltocV2 should feel like a **conversation with an expert career coach meets a professional design tool**, not a traditional form-filling experience. The interface combines three equal pillars: (1) conversational AI that modifies content in real-time, (2) elegant live preview that reflects changes instantly, and (3) visual design editor for fine-tuning aesthetics. Users should experience a "magic moment" when they see the AI modify their CV in real-time as they chat, then seamlessly switch to adjusting design variables like colors, fonts, and spacing with Figma-like elegance. The design prioritizes **speed, clarity, and creative control**: minimal clicks to value, instant feedback, and zero confusion about what's happening. The aesthetic is **modern, clean, and trustworthy** - this is a professional tool handling career-critical content.
+AltoCV should feel like a **conversation with an expert career coach meets a professional design tool**, not a traditional form-filling experience. The interface combines three equal pillars: (1) conversational AI that modifies content in real-time, (2) elegant live preview that reflects changes instantly, and (3) visual design editor for fine-tuning aesthetics. Users should experience a "magic moment" when they see the AI modify their CV in real-time as they chat, then seamlessly switch to adjusting design variables like colors, fonts, and spacing with Figma-like elegance. The design prioritizes **speed, clarity, and creative control**: minimal clicks to value, instant feedback, and zero confusion about what's happening. The aesthetic is **modern, clean, and trustworthy** - this is a professional tool handling career-critical content.
 
 ### Key Interaction Paradigms
 
@@ -160,7 +160,7 @@ AltocV2 should feel like a **conversation with an expert career coach meets a pr
 
 ### Accessibility: WCAG AA
 
-AltocV2 will target **WCAG 2.1 Level AA compliance** to ensure professional accessibility without over-engineering for a portfolio MVP. This includes: keyboard navigation for all interactive elements, sufficient color contrast ratios (4.5:1 for text), screen reader compatible labels and ARIA attributes, focus indicators on all focusable elements, responsive text sizing, and accessible color picker with contrast validation.
+AltoCV will target **WCAG 2.1 Level AA compliance** to ensure professional accessibility without over-engineering for a portfolio MVP. This includes: keyboard navigation for all interactive elements, sufficient color contrast ratios (4.5:1 for text), screen reader compatible labels and ARIA attributes, focus indicators on all focusable elements, responsive text sizing, and accessible color picker with contrast validation.
 
 **Assumption**: Given the 3-month timeline and solo development, full AAA compliance or extensive testing with assistive technologies is out of scope. Design panel controls must be keyboard-accessible but may not have perfect screen reader experience initially.
 
@@ -194,7 +194,7 @@ AltocV2 will target **WCAG 2.1 Level AA compliance** to ensure professional acce
 
 **Structure**: Single Next.js monorepo with clear separation of concerns
 ```
-altocv2/
+altocv/
 ├── app/              # Next.js 15 App Router pages
 ├── components/       # React components (ui, cv-editor, chat, design-panel)
 ├── lib/              # Utilities, DB client, AI helpers
@@ -369,7 +369,7 @@ Final UX polish, responsive design refinement, beta testing with friends, bug fi
 
 ## Epic 1: Foundation & Core Infrastructure
 
-**Goal**: Establish the technical foundation for AltocV2 by setting up Next.js 15 project with authentication, database, CI/CD pipeline, and core data models. This epic delivers a deployed application with user registration, a basic dashboard, and verified infrastructure that supports future feature development.
+**Goal**: Establish the technical foundation for AltoCV by setting up Next.js 15 project with authentication, database, CI/CD pipeline, and core data models. This epic delivers a deployed application with user registration, a basic dashboard, and verified infrastructure that supports future feature development.
 
 ### Story 1.1: Initialize Next.js 15 Project with TypeScript
 
@@ -1140,7 +1140,7 @@ so that **I can decide if Pro subscription is worth the investment**.
 4. CTA buttons: "Get Started" (Free), "Upgrade to Pro" (Pro)
 5. FAQ section answers common questions (refunds, cancellation, credit rollover)
 6. Pricing displayed with annual option (save 20%): $9.99/month or $95.88/year
-7. Social proof: "Join 500+ professionals using AltocV2" (update number dynamically)
+7. Social proof: "Join 500+ professionals using AltoCV" (update number dynamically)
 
 ### Story 8.7: Add Credit Usage Analytics Dashboard
 
@@ -1245,7 +1245,7 @@ I want **the application deployed to production with comprehensive monitoring**,
 so that **I can detect and resolve issues proactively**.
 
 **Acceptance Criteria**:
-1. Production domain configured with custom domain (e.g., altocv2.com)
+1. Production domain configured with custom domain (e.g., altocv.com)
 2. HTTPS enabled with automatic certificate renewal
 3. Environment variables verified in Vercel production environment
 4. Database migrations applied to production database
@@ -1418,7 +1418,7 @@ The PRD and epics are comprehensive, properly structured, and ready for architec
 ### UX Expert Prompt
 
 ```
-I have a comprehensive PRD for AltocV2, an AI-powered CV builder with a three-pillar architecture:
+I have a comprehensive PRD for AltoCV, an AI-powered CV builder with a three-pillar architecture:
 conversational AI editor, live preview, and Figma-inspired design panel. The product focuses on
 helping professionals create ATS-optimized CVs through natural conversation, visual customization,
 and smart import/export features.
@@ -1442,7 +1442,7 @@ solutions over perfection.
 ### Architect Prompt
 
 ```
-I have a comprehensive PRD for AltocV2, an AI-powered CV builder with advanced features including
+I have a comprehensive PRD for AltoCV, an AI-powered CV builder with advanced features including
 conversational editing via Vercel AI SDK, fine-tuned ATS analysis, vector-based job matching,
 and real-time design customization. This is a 3-month solo portfolio project with strict cost
 constraints (<$50/month operational).
