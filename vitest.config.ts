@@ -10,7 +10,7 @@ export default defineConfig({
     globals: true,
     css: true,
     include: ['__tests__/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    pool: 'forks',
+    pool: 'threads',
   },
   resolve: {
     alias: {

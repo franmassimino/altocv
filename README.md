@@ -1,6 +1,6 @@
 <div align="center">
 
-# AltoCV
+# 🚀 AltoCV
 
 **Your AI-Powered Career Coach for CV Creation**
 
@@ -12,65 +12,76 @@ Build, customize, and optimize your CV with conversational AI, live preview, and
 
 </div>
 
-## What is AltoCV?
+## 💡 What is AltoCV?
 
 AltoCV is a modern CV builder that combines **three powerful pillars** to revolutionize how you create and adapt your resume:
 
-1. **Conversational AI Editor** - Chat naturally with an AI assistant that edits your CV in real-time
-2. **Live Visual Preview** - See changes instantly with professional, customizable templates
-3. **Design Panel** - Fine-tune colors, fonts, and spacing with Figma-inspired controls
+1.  **✍️ Conversational AI Editor** - Chat naturally with an AI assistant that edits your CV in real-time
+2.  **👀 Live Visual Preview** - See changes instantly with professional, customizable templates
+3.  **🎨 Design Panel** - Fine-tune colors, fonts, and spacing with Figma-inspired controls
 
 Unlike traditional CV builders, AltocV2 understands what Applicant Tracking Systems (ATS) look for and helps you create CVs that pass automated screening while maintaining professional design.
 
-## Features
+## ✨ Core Features
 
-### Core Capabilities
+### 🛠️ Core Capabilities
 
-- **AI-Powered Editing** - Conversational interface using Vercel AI SDK with streaming responses
-- **Smart Templates** - Industry-optimized templates (Tech, Corporate, Creative) with full customization
-- **ATS Analysis** - Fine-tuned AI engine that identifies compatibility issues and suggests fixes
-- **Intelligent Import** - Parse existing CVs from PDF or LinkedIn exports
-- **Job Matching** - Vector-based compatibility scoring between your CV and job postings
-- **Real-time Design** - Instant visual updates as you customize colors, fonts, and spacing
-- **Auto-save** - Never lose your work with continuous cloud synchronization
-- **Multi-format Export** - ATS-friendly PDF, DOCX, and plain text formats
+* **AI-Powered Editing** - Conversational interface using Vercel AI SDK with streaming responses
+* **Smart Templates** - Industry-optimized templates (Tech, Corporate, Creative) with full customization
+* **ATS Analysis** - Fine-tuned AI engine that identifies compatibility issues and suggests fixes
+* **Intelligent Import** - Parse existing CVs from PDF or LinkedIn exports
+* **Job Matching** - Vector-based compatibility scoring between your CV and job postings
+* **Real-time Design** - Instant visual updates as you customize colors, fonts, and spacing
+* **Auto-save** - Never lose your work with continuous cloud synchronization
+* **Multi-format Export** - ATS-friendly PDF, DOCX, and plain text formats
 
-### Tech Highlights
+### 💻 Tech Highlights
 
-- Built with **Next.js 15** (App Router, React Server Components)
-- **Generative UI** with Vercel AI SDK for interactive AI components
-- **Credit-based system** with Stripe integration for monetization
-- **Vector embeddings** using pgvector for semantic job matching
-- **Type-safe** with TypeScript strict mode and Zod validation
-- **Responsive design** with Tailwind CSS and shadcn/ui components
+* Built with **Next.js 15** (App Router, React Server Components)
+* **Generative UI** with Vercel AI SDK for interactive AI components
+* **Credit-based system** with Stripe integration for monetization
+* **Vector embeddings** using `pgvector` for semantic job matching
+* **Type-safe** with TypeScript strict mode and Zod validation
+* **Responsive design** with Tailwind CSS and `shadcn/ui` components
 
-## Tech Stack
+## ⚙️ Tech Stack
 
-**Frontend**
-- Next.js 15 (App Router)
-- TypeScript
-- Tailwind CSS + shadcn/ui
-- Zustand + TanStack Query
-- Framer Motion
+### Frontend
+* Next.js 15 (App Router)
+* TypeScript
+* Tailwind CSS + `shadcn/ui`
+* Zustand + TanStack Query
+* Framer Motion
 
-**Backend & Data**
-- PostgreSQL (Neon Serverless)
-- Prisma ORM
-- NextAuth.js v5
-- Upstash Redis
-- Vercel Blob Storage
+### Backend & Data
+* PostgreSQL (Neon Serverless)
+* Prisma ORM
+* NextAuth.js v5
+* Upstash Redis
+* Vercel Blob Storage
 
-**AI/ML**
-- Vercel AI SDK
-- OpenAI (GPT-4o, embeddings)
-- Anthropic (Claude 3.5)
-- Supabase pgvector
+### AI/ML
+* Vercel AI SDK
+* OpenAI (GPT-4o, embeddings)
+* Anthropic (Claude 3.5)
+* Supabase `pgvector`
 
-**Infrastructure**
-- Vercel (hosting)
-- Stripe (payments)
-- Sentry (monitoring)
-- PostHog (analytics)
+### Infrastructure
+* Vercel (hosting)
+* Stripe (payments)
+* Sentry (monitoring)
+* PostHog (analytics)
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Node.js 18+ and npm/pnpm/yarn
+* PostgreSQL database (we recommend [Neon](https://neon.tech) for serverless)
+* API keys for OpenAI and/or Anthropic
+* Stripe account (for payment features)
 
 ## Getting Started
 
@@ -110,7 +121,7 @@ Unlike traditional CV builders, AltocV2 understands what Applicant Tracking Syst
    NEXTAUTH_SECRET=your-unique-secret-key-here
    NEXTAUTH_URL=http://localhost:3000
 
-   # OAuth providers (optional)
+   # OAuth providers (required for authentication)
    GOOGLE_CLIENT_ID=your-google-client-id
    GOOGLE_CLIENT_SECRET=your-google-client-secret
 
@@ -132,10 +143,31 @@ Unlike traditional CV builders, AltocV2 understands what Applicant Tracking Syst
 
    **Important**:
    - Replace `your_database_name` with your own unique database name
-   - Generate a secure random string for `NEXTAUTH_SECRET`
+   - Generate a secure random string for `NEXTAUTH_SECRET` (use `openssl rand -base64 32`)
    - Never commit `.env.local` to version control
 
-4. **Set up the database**
+4. **Set up Google OAuth (Required for Authentication)**
+
+   AltoCV uses Google OAuth for user authentication. Follow these steps to set it up:
+
+   a. Go to [Google Cloud Console](https://console.cloud.google.com/)
+
+   b. Create a new project or select an existing one
+
+   c. Enable the Google OAuth 2.0 API:
+      - Navigate to "APIs & Services" > "Credentials"
+      - Click "Create Credentials" > "OAuth 2.0 Client ID"
+      - Configure OAuth consent screen if prompted (required first time)
+
+   d. Configure OAuth 2.0 Client:
+      - Application type: "Web application"
+      - Authorized redirect URIs:
+        - Development: `http://localhost:3000/api/auth/callback/google`
+        - Production: `https://yourdomain.com/api/auth/callback/google`
+
+   e. Copy the Client ID and Client Secret to your `.env.local` file
+
+5. **Set up the database**
    ```bash
    # Generate Prisma Client
    npx prisma generate
