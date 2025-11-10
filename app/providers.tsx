@@ -1,9 +1,18 @@
 'use client';
 
 import { SessionProvider } from 'next-auth/react';
-import { ThemeProvider } from '@/components/theme-provider';
+import dynamic from 'next/dynamic';
+import { type ReactNode } from 'react';
 
-export function Providers({ children }: { children: React.ReactNode }) {
+// Dynamically import ThemeProvider to reduce initial bundle size
+const ThemeProvider = dynamic(
+  () => import('@/components/theme-provider').then((mod) => mod.ThemeProvider),
+  {
+    ssr: true,
+  }
+);
+
+export function Providers({ children }: { children: ReactNode }) {
   return (
     <SessionProvider>
       <ThemeProvider
