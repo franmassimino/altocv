@@ -16,7 +16,7 @@ async function DashboardContent() {
   const { user } = session;
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="p-12 mx-auto">
       {/* User Welcome Section */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">

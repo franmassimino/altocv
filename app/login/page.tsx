@@ -1,4 +1,4 @@
-import { signIn } from '@/lib/auth';
+import { getServerSession, signIn } from '@/lib/auth';
 import { Button } from '@/components/ui/button';
 import {
   Field,
@@ -7,6 +7,7 @@ import {
   FieldSeparator,
 } from '@/components/ui/field';
 import Image from 'next/image';
+import { redirect } from 'next/navigation';
 
 export default async function LoginPage({
   searchParams,
@@ -15,6 +16,13 @@ export default async function LoginPage({
 }) {
   const params = await searchParams;
   const callbackUrl = params.callbackUrl || '/dashboard';
+
+  const session = await getServerSession();
+
+  // Type-safe check (middleware should handle this, but defensive programming)
+  if (session?.user) {
+    redirect('/dashboard');
+  }
 
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
