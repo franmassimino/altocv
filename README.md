@@ -12,6 +12,23 @@ Build, customize, and optimize your CV with conversational AI, live preview, and
 
 </div>
 
+<!-- FEATURE_TIMELINE_START -->
+## 📊 Feature Timeline
+
+### ✅ Latest Feature Published
+
+**Implement Authentication with NextAuth v5**
+
+to register and login using Google OAuth or email magic links
+
+### 🚀 Coming Next
+
+🔜 **Create User Dashboard with Basic Layout** _(In Review)_
+
+---
+
+<!-- FEATURE_TIMELINE_END -->
+
 ## 💡 What is AltoCV?
 
 AltoCV is a modern CV builder that combines **three powerful pillars** to revolutionize how you create and adapt your resume:
@@ -20,7 +37,7 @@ AltoCV is a modern CV builder that combines **three powerful pillars** to revolu
 2.  **👀 Live Visual Preview** - See changes instantly with professional, customizable templates
 3.  **🎨 Design Panel** - Fine-tune colors, fonts, and spacing with Figma-inspired controls
 
-Unlike traditional CV builders, AltoCV understands what Applicant Tracking Systems (ATS) look for and helps you create CVs that pass automated screening while maintaining professional design.
+Unlike traditional CV builders, AltocV2 understands what Applicant Tracking Systems (ATS) look for and helps you create CVs that pass automated screening while maintaining professional design.
 
 ## ✨ Core Features
 
@@ -121,7 +138,7 @@ Unlike traditional CV builders, AltoCV understands what Applicant Tracking Syste
    NEXTAUTH_SECRET=your-unique-secret-key-here
    NEXTAUTH_URL=http://localhost:3000
 
-   # OAuth providers (optional)
+   # OAuth providers (required for authentication)
    GOOGLE_CLIENT_ID=your-google-client-id
    GOOGLE_CLIENT_SECRET=your-google-client-secret
 
@@ -143,10 +160,31 @@ Unlike traditional CV builders, AltoCV understands what Applicant Tracking Syste
 
    **Important**:
    - Replace `your_database_name` with your own unique database name
-   - Generate a secure random string for `NEXTAUTH_SECRET`
+   - Generate a secure random string for `NEXTAUTH_SECRET` (use `openssl rand -base64 32`)
    - Never commit `.env.local` to version control
 
-4. **Set up the database**
+4. **Set up Google OAuth (Required for Authentication)**
+
+   AltoCV uses Google OAuth for user authentication. Follow these steps to set it up:
+
+   a. Go to [Google Cloud Console](https://console.cloud.google.com/)
+
+   b. Create a new project or select an existing one
+
+   c. Enable the Google OAuth 2.0 API:
+      - Navigate to "APIs & Services" > "Credentials"
+      - Click "Create Credentials" > "OAuth 2.0 Client ID"
+      - Configure OAuth consent screen if prompted (required first time)
+
+   d. Configure OAuth 2.0 Client:
+      - Application type: "Web application"
+      - Authorized redirect URIs:
+        - Development: `http://localhost:3000/api/auth/callback/google`
+        - Production: `https://yourdomain.com/api/auth/callback/google`
+
+   e. Copy the Client ID and Client Secret to your `.env.local` file
+
+5. **Set up the database**
    ```bash
    # Generate Prisma Client
    npx prisma generate
@@ -186,6 +224,9 @@ npm run test:e2e        # Run E2E tests
 # Code Quality
 npm run lint            # Run ESLint
 npm run format          # Format with Prettier
+
+# Documentation
+npm run update:timeline # Update feature timeline in README
 ```
 
 ## Project Structure
