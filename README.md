@@ -12,6 +12,23 @@ Build, customize, and optimize your CV with conversational AI, live preview, and
 
 </div>
 
+<!-- FEATURE_TIMELINE_START -->
+## 📊 Feature Timeline
+
+### ✅ Latest Feature Published
+
+**Implement Authentication with NextAuth v5**
+
+to register and login using Google OAuth or email magic links
+
+### 🚀 Coming Next
+
+🔜 **Create User Dashboard with Basic Layout** _(In Review)_
+
+---
+
+<!-- FEATURE_TIMELINE_END -->
+
 ## 💡 What is AltoCV?
 
 AltoCV is a modern CV builder that combines **three powerful pillars** to revolutionize how you create and adapt your resume:
@@ -207,6 +224,9 @@ npm run test:e2e        # Run E2E tests
 # Code Quality
 npm run lint            # Run ESLint
 npm run format          # Format with Prettier
+
+# Documentation
+npm run update:timeline # Update feature timeline in README
 ```
 
 ## Project Structure
