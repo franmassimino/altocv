@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { signOut } from 'next-auth/react';
 
 interface LogoutButtonProps {
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
@@ -9,12 +10,7 @@ interface LogoutButtonProps {
 
 export function LogoutButton({ variant = 'ghost', className }: LogoutButtonProps) {
   const handleLogout = async () => {
-    // Use form submission to trigger Server Action
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = '/api/auth/signout';
-    document.body.appendChild(form);
-    form.submit();
+    await signOut({ callbackUrl: '/login' });
   };
 
   return (
