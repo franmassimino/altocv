@@ -19,18 +19,32 @@ export const authConfig: NextAuthConfig = {
     maxAge: 24 * 60 * 60, // 24 hours
   },
   callbacks: {
-    async signIn({ user }) {
+    async signIn({ user, account, profile }) {
       if (!user.email) {
+        console.error('[NextAuth] signIn callback: No email provided', {
+          userId: user.id,
+          accountProvider: account?.provider,
+        });
         return false;
       }
 
       try {
+        console.log('[NextAuth] signIn callback: Processing sign-in', {
+          email: user.email,
+          provider: account?.provider,
+          hasProfile: !!profile,
+        });
+
         // Check if user exists
         const existingUser = await db.user.findUnique({
           where: { email: user.email },
         });
 
         if (existingUser) {
+          console.log('[NextAuth] signIn callback: Updating existing user', {
+            userId: existingUser.id,
+            email: user.email,
+          });
           // Update existing user's name and image if changed
           await db.user.update({
             where: { email: user.email },
@@ -40,6 +54,10 @@ export const authConfig: NextAuthConfig = {
             },
           });
         } else {
+          console.log('[NextAuth] signIn callback: Creating new user', {
+            email: user.email,
+            name: user.name,
+          });
           // Create new user with initial credits
           await db.user.create({
             data: {
@@ -50,11 +68,19 @@ export const authConfig: NextAuthConfig = {
               tier: 'FREE',
             },
           });
+          console.log('[NextAuth] signIn callback: New user created successfully', {
+            email: user.email,
+          });
         }
 
         return true;
       } catch (error) {
-        console.error('Error in signIn callback:', error);
+        console.error('[NextAuth] Error in signIn callback:', {
+          error: error instanceof Error ? error.message : 'Unknown error',
+          stack: error instanceof Error ? error.stack : undefined,
+          email: user.email,
+          provider: account?.provider,
+        });
         return false;
       }
     },

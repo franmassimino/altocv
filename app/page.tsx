@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export default function Home() {
   return (
@@ -11,8 +12,12 @@ export default function Home() {
           AI-Powered CV Builder with ATS optimization
         </p>
         <div className="flex gap-4">
-          <Button variant="default">Get Started</Button>
-          <Button variant="outline">Learn More</Button>
+          <Link href="/login">
+            <Button variant="default">Get Started</Button>
+          </Link>
+          <Link href="/login">
+            <Button variant="outline">Learn More</Button>
+          </Link>
         </div>
       </main>
     </div>
