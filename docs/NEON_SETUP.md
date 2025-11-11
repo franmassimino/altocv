@@ -77,7 +77,7 @@ You should see:
 {
   "env": {
     "DATABASE_URL": true,
-    "NEXTAUTH_URL": true,
+    "AUTH_URL": true,
     ...
   }
 }
