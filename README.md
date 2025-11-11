@@ -17,13 +17,13 @@ Build, customize, and optimize your CV with conversational AI, live preview, and
 
 ### ✅ Latest Feature Published
 
-**Implement Authentication with NextAuth v5**
+**Create User Dashboard with Basic Layout**
 
-to register and login using Google OAuth or email magic links
+a dashboard showing my profile and placeholder for my CVs
 
 ### 🚀 Coming Next
 
-🔜 **Create User Dashboard with Basic Layout** _(In Review)_
+🔜 **Deploy to Vercel with Environment Configuration**
 
 ---
 
