@@ -3,6 +3,7 @@ import Google from 'next-auth/providers/google';
 import { db } from '@/lib/db';
 
 export const authConfig: NextAuthConfig = {
+  debug: true, // Enable debug mode to see detailed logs in production
   providers: [
     Google({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -18,6 +19,8 @@ export const authConfig: NextAuthConfig = {
     strategy: 'jwt',
     maxAge: 24 * 60 * 60, // 24 hours
   },
+  trustHost: true, // Required for Vercel deployment
+
   callbacks: {
     async signIn({ user, account, profile }) {
       if (!user.email) {
