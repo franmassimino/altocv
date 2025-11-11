@@ -80,7 +80,7 @@ export default async function LoginPage({
 
       {/* Right side - Hero content */}
       <div className="relative hidden bg-muted lg:block p-10">
-        <div className="absolute inset-0 bg-primary/20 " />
+        <div className="absolute inset-0 bg-primary " />
         <div className="relative flex h-full flex-col items-start justify-end">
         </div>
       </div>
