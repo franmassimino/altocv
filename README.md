@@ -135,8 +135,8 @@ Unlike traditional CV builders, AltocV2 understands what Applicant Tracking Syst
    DATABASE_URL=postgresql://user:password@localhost:5432/your_database_name
 
    # Auth - Generate your own secret
-   NEXTAUTH_SECRET=your-unique-secret-key-here
-   NEXTAUTH_URL=http://localhost:3000
+   AUTH_SECRET=your-unique-secret-key-here
+   AUTH_URL=http://localhost:3000
 
    # OAuth providers (required for authentication)
    GOOGLE_CLIENT_ID=your-google-client-id
@@ -160,7 +160,7 @@ Unlike traditional CV builders, AltocV2 understands what Applicant Tracking Syst
 
    **Important**:
    - Replace `your_database_name` with your own unique database name
-   - Generate a secure random string for `NEXTAUTH_SECRET` (use `openssl rand -base64 32`)
+   - Generate a secure random string for `AUTH_SECRET` (use `openssl rand -base64 32`)
    - Never commit `.env.local` to version control
 
 4. **Set up Google OAuth (Required for Authentication)**
@@ -259,8 +259,8 @@ AltoCV is optimized for deployment on Vercel with zero configuration.
    DATABASE_URL=postgresql://user:password@host/database?pgbouncer=true
 
    # Auth
-   NEXTAUTH_SECRET=<generate-with-openssl-rand-base64-32>
-   NEXTAUTH_URL=https://your-domain.vercel.app
+   AUTH_SECRET=<generate-with-openssl-rand-base64-32>
+   AUTH_URL=https://your-domain.vercel.app
    GOOGLE_CLIENT_ID=your-google-client-id
    GOOGLE_CLIENT_SECRET=your-google-client-secret
 
@@ -269,9 +269,9 @@ AltoCV is optimized for deployment on Vercel with zero configuration.
    ```
 
    **Important Notes:**
-   - Generate a **new** `NEXTAUTH_SECRET` for production (don't reuse dev secret)
+   - Generate a **new** `AUTH_SECRET` for production (don't reuse dev secret)
    - Use Neon's pooled connection URL (with `?pgbouncer=true`) for serverless
-   - Set `NEXTAUTH_URL` to your actual production domain
+   - Set `AUTH_URL` to your actual production domain
 
 3. **Update Google OAuth Redirect URIs**
 
@@ -338,8 +338,8 @@ Use this endpoint for uptime monitoring, load balancer health checks, or CI/CD v
 
 **OAuth login fails in production:**
 - Verify redirect URIs are added to Google Cloud Console
-- Check `NEXTAUTH_URL` matches your actual domain
-- Ensure `NEXTAUTH_SECRET` is set (different from development)
+- Check `AUTH_URL` matches your actual domain
+- Ensure `AUTH_SECRET` is set (different from development)
 
 **Database connection errors:**
 - Use Neon's pooled connection URL (ends with `?pgbouncer=true`)
