@@ -36,12 +36,15 @@ export const authConfig: NextAuthConfig = {
           email: user.email,
           provider: account?.provider,
           hasProfile: !!profile,
+          hasDatabaseUrl: !!process.env.DATABASE_URL,
         });
 
         // Check if user exists
+        console.log('[NextAuth] signIn callback: Attempting database connection');
         const existingUser = await db.user.findUnique({
           where: { email: user.email },
         });
+        console.log('[NextAuth] signIn callback: Database query successful');
 
         if (existingUser) {
           console.log('[NextAuth] signIn callback: Updating existing user', {
