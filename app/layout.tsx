@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   keywords: ["CV builder", "Resume builder", "ATS friendly", "AI CV", "professional resume"],
   authors: [{ name: "AltoCV" }],
   creator: "AltoCV",
-  metadataBase: new URL(process.env.NEXTAUTH_URL || "http://localhost:3000"),
+  metadataBase: new URL(process.env.NEXTAUTH_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")),
   openGraph: {
     type: "website",
     locale: "en_US",

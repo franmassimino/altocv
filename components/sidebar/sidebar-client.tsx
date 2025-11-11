@@ -25,7 +25,7 @@ export function SidebarClient({ user }: SidebarClientProps) {
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed left-0 top-0 z-40 h-screen transition-all duration-300 bg-background border-r',
+          'fixed left-0 top-0 z-40 bg-sidebar h-screen transition-all duration-300 border-r',
           sidebarOpen ? 'w-64' : 'w-16'
         )}
       >

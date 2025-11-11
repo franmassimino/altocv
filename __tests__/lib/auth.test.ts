@@ -1,5 +1,5 @@
+import { isAuthenticated } from '@/lib/utils';
 import { describe, it, expect } from 'vitest';
-import { isAuthenticated } from '@/lib/auth';
 
 describe('Auth Utilities', () => {
   describe('isAuthenticated', () => {

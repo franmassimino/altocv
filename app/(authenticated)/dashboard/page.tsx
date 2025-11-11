@@ -12,7 +12,6 @@ async function DashboardContent() {
   if (!session?.user) {
     redirect('/login');
   }
-
   const { user } = session;
 
   return (
@@ -27,20 +26,18 @@ async function DashboardContent() {
 
       {/* Empty State for CVs */}
       <Card className="p-12 text-center">
-        <div className="max-w-md mx-auto space-y-4">
+        <div className="mx-auto">
           <div className="flex justify-center mb-4">
             <FileText className="w-16 h-16 text-muted-foreground" />
           </div>
-          <h2 className="text-2xl font-semibold">No CVs yet. Create your first CV!</h2>
+          <h2 className="text-2xl mb-3 font-semibold">No CVs yet. Create your first CV!</h2>
           <p className="text-muted-foreground">
             Start building your professional CV in minutes with our AI-powered editor.
           </p>
-          <Button size="lg" disabled className="mt-4">
+          <Button size="lg"  className="mt-4">
             Create New CV
           </Button>
-          <p className="text-sm text-muted-foreground">
-            (Coming soon in the next release)
-          </p>
+          
         </div>
       </Card>
     </div>
