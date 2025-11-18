@@ -25,6 +25,8 @@ a dashboard showing my profile and placeholder for my CVs
 
 🔜 **Deploy to Vercel with Environment Configuration**
 
+📅 **Create CV Data Model and State Management** _(In Review)_
+
 ---
 
 <!-- FEATURE_TIMELINE_END -->
