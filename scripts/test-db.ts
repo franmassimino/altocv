@@ -1,4 +1,4 @@
-import { db } from '../lib/db'
+import { db } from '../src/lib/db'
 
 async function testDatabase() {
   console.log('🧪 Testing database connection and CRUD operations...\n')
