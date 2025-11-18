@@ -17,15 +17,15 @@ Build, customize, and optimize your CV with conversational AI, live preview, and
 
 ### ✅ Latest Feature Published
 
-**Create User Dashboard with Basic Layout**
+**Create CV Data Model and State Management**
 
-a dashboard showing my profile and placeholder for my CVs
+a comprehensive CV data model with Zustand state management
 
 ### 🚀 Coming Next
 
-🔜 **Deploy to Vercel with Environment Configuration**
+🔜 **Setup Monitoring and Error Tracking**
 
-📅 **Create CV Data Model and State Management** _(In Review)_
+📅 **Build Basic CV Template Component**
 
 ---
 
