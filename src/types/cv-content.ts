@@ -70,3 +70,30 @@ export interface CVContent {
   skills: string[]; // List of skills/technologies
   projects: ProjectItem[];
 }
+
+/**
+ * Design settings for CV template customization
+ * Used by design panel to control colors, fonts, and spacing via CSS custom properties
+ */
+export interface DesignSettings {
+  colors: {
+    primary: string;
+    accent: string;
+    text: string;
+    background: string;
+  };
+  typography: {
+    fontPairing: string;
+    headingSize: number;
+    bodySize: number;
+    lineHeight: number;
+  };
+  spacing: {
+    density: number; // 1 = normal, 0.8 = compact, 1.2 = spacious
+    sectionMargin: number;
+    contentPadding: number;
+  };
+  layout: {
+    sectionOrder: string[];
+  };
+}

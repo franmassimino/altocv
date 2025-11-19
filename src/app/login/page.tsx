@@ -7,6 +7,7 @@ import {
   FieldSeparator,
 } from '@/components/ui/field';
 import Image from 'next/image';
+import { Logo } from '@/components/ui/logo';
 import { redirect } from 'next/navigation';
 
 export default async function LoginPage({
@@ -28,19 +29,24 @@ export default async function LoginPage({
     <div className="grid min-h-svh lg:grid-cols-2">
       {/* Left side - Login form */}
       <div className="flex flex-col gap-4 p-6 md:p-10">
+        {/* Navigation bar */}
+        <nav className="flex items-center justify-between">
+          <Logo size="lg" />
+        </nav>
+
         {/* Centered form */}
         <div className="flex flex-1 items-center justify-center">
           <div className="w-full max-w-xs">
             <form className="flex flex-col">
               <FieldGroup>
                 <div className="flex flex-col items-center gap-1 text-center">
-                  <h1 className="text-2xl font-bold mb-2">Inicia sesión en tu cuenta</h1>
+                  <h1 className="text-3xl font-bold mb-2">Welcome to AltoCV!</h1>
                   <p className="text-balance text-sm text-muted-foreground mb-2">
-                    Usa Google para acceder a tu cuenta
+                    Use Google to login or create a new account
                   </p>
                 </div>
 
-                <FieldSeparator className=''>Continuar con</FieldSeparator>
+                <FieldSeparator className=''>Continue with</FieldSeparator>
 
                 <Field>
                   <Button
@@ -59,7 +65,7 @@ export default async function LoginPage({
                       height={20}
                       className="size-5"
                     />
-                    Acceder con Google
+                    Login with Google
                   </Button>
                   <FieldDescription className="text-center text-xs">
                     Al continuar, aceptas nuestros{' '}

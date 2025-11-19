@@ -1,9 +1,10 @@
 import { Suspense } from 'react';
 import { getServerSession } from '@/lib/auth/auth';
 import { redirect } from 'next/navigation';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { FileText } from 'lucide-react';
+import { FileText, Eye } from 'lucide-react';
 
 async function DashboardContent() {
   const session = await getServerSession();
@@ -34,10 +35,15 @@ async function DashboardContent() {
           <p className="text-muted-foreground">
             Start building your professional CV in minutes with our AI-powered editor.
           </p>
-          <Button size="lg"  className="mt-4">
-            Create New CV
-          </Button>
-          
+          <div className="flex gap-3 justify-center mt-4">
+            <Button size="lg">Create New CV</Button>
+            <Link href="/cv-preview">
+              <Button size="lg" variant="outline">
+                <Eye className="w-4 h-4 mr-2" />
+                Preview Template
+              </Button>
+            </Link>
+          </div>
         </div>
       </Card>
     </div>
