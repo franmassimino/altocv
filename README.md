@@ -17,15 +17,15 @@ Build, customize, and optimize your CV with conversational AI, live preview, and
 
 ### ✅ Latest Feature Published
 
-**Create CV Data Model and State Management**
+**Build Basic CV Template Component**
 
-a comprehensive CV data model with Zustand state management
+a single professional CV template as a React component
 
 ### 🚀 Coming Next
 
 🔜 **Setup Monitoring and Error Tracking**
 
-📅 **Build Basic CV Template Component**
+📅 **Implement Inline Editing with Click-to-Edit** _(In Review)_
 
 ---
 
