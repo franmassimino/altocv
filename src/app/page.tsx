@@ -1,25 +1,35 @@
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { LandingNav } from "@/components/landing/landing-nav";
+import { HeroSection } from "@/components/landing/hero-section";
+import { ProblemStatement } from "@/components/landing/problem-statement";
+import { ThreePillars } from "@/components/landing/three-pillars";
+import { FeaturesGrid } from "@/components/landing/features-grid";
+import { TemplatesShowcase } from "@/components/landing/templates-showcase";
+import { PricingSection } from "@/components/landing/pricing-section";
+import { TestimonialsSection } from "@/components/landing/testimonials-section";
+import { FinalCTA } from "@/components/landing/final-cta";
+import { LandingFooter } from "@/components/landing/landing-footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-col items-center gap-8 p-8 text-center">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-          Welcome to AltoCV
-        </h1>
-        <p className="max-w-md text-lg text-zinc-600 dark:text-zinc-400">
-          AI-Powered CV Builder with ATS optimization
-        </p>
-        <div className="flex gap-4">
-          <Link href="/login">
-            <Button variant="default">Get Started</Button>
-          </Link>
-          <Link href="/login">
-            <Button variant="outline">Learn More</Button>
-          </Link>
+    <div className="min-h-screen bg-background">
+      <LandingNav />
+      <main>
+        <HeroSection />
+        <ProblemStatement />
+        <div id="features">
+          <ThreePillars />
         </div>
+        <FeaturesGrid />
+        <div id="templates">
+          <TemplatesShowcase />
+        </div>
+        <div id="pricing">
+          <PricingSection />
+        </div>
+        <TestimonialsSection />
+        <FinalCTA />
       </main>
+      <LandingFooter />
     </div>
   );
 }

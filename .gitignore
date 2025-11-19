@@ -47,3 +47,6 @@ next-env.d.ts
 
 # Mastra - build artifacts
 .mastra/
+
+# Windows null device file
+nul

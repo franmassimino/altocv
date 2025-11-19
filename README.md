@@ -93,6 +93,78 @@ Unlike traditional CV builders, AltocV2 understands what Applicant Tracking Syst
 
 ---
 
+## 🎨 CV Templates
+
+AltoCV features professional, ATS-friendly CV templates built with React and customizable design settings.
+
+### Modern Tech Template
+
+The **Modern Tech** template is a clean, single-column professional CV template optimized for technical roles and modern industries.
+
+**Features:**
+* **Professional Design** - Clean, modern aesthetic with excellent readability
+* **Full Customization** - Control colors, fonts, spacing via CSS custom properties
+* **Responsive** - Optimized for desktop (1440px+) and tablet (768px+) viewing
+* **Print-Ready** - A4 page size with proper print styles for PDF export
+* **ATS-Friendly** - Semantic HTML structure for automated parsing
+* **Accessible** - Built with shadcn/ui components for maximum accessibility
+
+**Sections Included:**
+1. Header with contact information (email, phone, location, LinkedIn, website)
+2. Professional summary (optional)
+3. Work experience with company, role, dates, and achievement bullets
+4. Education with institution, degree, GPA, and achievements
+5. Skills displayed as interactive badges with tooltips
+6. Projects with technologies, highlights, and links
+
+**Preview the Template:**
+
+Visit `/cv-preview` after starting the development server to see a live preview with placeholder data.
+
+**Customization:**
+
+The template accepts a `designSettings` prop for complete customization:
+
+```typescript
+import ModernTechTemplate from '@/components/cv-templates/modern-tech-template';
+import { DEFAULT_DESIGN_SETTINGS } from '@/lib/constants/design-defaults';
+
+// Use default settings
+<ModernTechTemplate cv={cvData} />
+
+// Customize colors, fonts, spacing
+<ModernTechTemplate
+  cv={cvData}
+  designSettings={{
+    colors: {
+      primary: '#2563eb',
+      accent: '#0ea5e9',
+      text: '#1f2937',
+      background: '#ffffff',
+    },
+    typography: {
+      fontPairing: 'Inter',
+      headingSize: 24,
+      bodySize: 14,
+      lineHeight: 1.6,
+    },
+    spacing: {
+      density: 1,
+      sectionMargin: 24,
+      contentPadding: 16,
+    },
+  }}
+/>
+```
+
+**Design Presets:**
+
+- `DEFAULT_DESIGN_SETTINGS` - Professional blue theme (default)
+- `COMPACT_DESIGN_SETTINGS` - Fit more content on one page
+- `SPACIOUS_DESIGN_SETTINGS` - Clean, airy layout for senior roles
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
