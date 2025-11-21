@@ -2,13 +2,15 @@
 
 import { Button } from '@/components/ui/button';
 import { signOut } from 'next-auth/react';
+import { ReactNode } from 'react';
 
 interface LogoutButtonProps {
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
   className?: string;
+  children?: ReactNode;
 }
 
-export function LogoutButton({ variant = 'ghost', className }: LogoutButtonProps) {
+export function LogoutButton({ variant = 'ghost', className, children }: LogoutButtonProps) {
   const handleLogout = async () => {
     await signOut({ callbackUrl: '/login' });
   };
@@ -19,7 +21,7 @@ export function LogoutButton({ variant = 'ghost', className }: LogoutButtonProps
       variant={variant}
       className={className}
     >
-      Sign Out
+      {children || 'Sign Out'}
     </Button>
   );
 }

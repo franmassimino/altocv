@@ -1,17 +1,39 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Logo } from "@/components/ui/logo";
+import { Logo } from "@/components/logo";
 
 export function LandingNav() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-muted/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <nav
+      className={`
+        sticky top-0 z-50 w-full transition-all duration-300
+        ${scrolled
+          ? "border-b border-muted/40 bg-background/80 backdrop-blur"
+          : "bg-primary/5 border-transparent"
+        }
+      `}
+    >
       <div className="container max-w-7xl mx-auto px-6 md:px-8 lg:px-10">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo - Left */}
+          {/* Logo */}
           <Logo size="lg" />
 
-          {/* Navigation Links - Center */}
-          <div className="hidden md:flex items-center space-x-6 absolute left-1/2 transform -translate-x-1/2">
+          {/* Center Links */}
+          <div className="hidden md:flex items-center space-x-6 absolute left-1/2 -translate-x-1/2">
             <Link
               href="#features"
               className="text-sm font-medium hover:text-primary transition-colors"
@@ -32,12 +54,10 @@ export function LandingNav() {
             </Link>
           </div>
 
-          {/* CTA Button - Right */}
-          <div>
-            <Button asChild>
-              <Link href="/login">Get Started</Link>
-            </Button>
-          </div>
+          {/* CTA */}
+          <Button asChild>
+            <Link href="/login">Get Started</Link>
+          </Button>
         </div>
       </div>
     </nav>

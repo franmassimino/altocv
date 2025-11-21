@@ -1,10 +1,9 @@
 import { Suspense } from 'react';
 import { getServerSession } from '@/lib/auth/auth';
 import { redirect } from 'next/navigation';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { DashboardClient } from './dashboard-client';
 import { Card } from '@/components/ui/card';
-import { FileText, Eye } from 'lucide-react';
+import { prisma } from '@/lib/db/prisma';
 
 async function DashboardContent() {
   const session = await getServerSession();
@@ -15,54 +14,52 @@ async function DashboardContent() {
   }
   const { user } = session;
 
-  return (
-    <div className="p-12 mx-auto">
-      {/* User Welcome Section */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">
-          Welcome back, {user.name || 'User'}!
-        </h1>
-        <p className="text-muted-foreground">{user.email}</p>
-      </div>
+  // Fetch user's CVs
+  const cvs = await prisma.cV.findMany({
+    where: { userId: user.id },
+    orderBy: { updatedAt: 'desc' },
+    select: {
+      id: true,
+      title: true,
+      templateId: true,
+      atsScore: true,
+      lastAnalyzedAt: true,
+      updatedAt: true,
+      createdAt: true,
+    },
+  });
 
-      {/* Empty State for CVs */}
-      <Card className="p-12 text-center">
-        <div className="mx-auto">
-          <div className="flex justify-center mb-4">
-            <FileText className="w-16 h-16 text-muted-foreground" />
-          </div>
-          <h2 className="text-2xl mb-3 font-semibold">No CVs yet. Create your first CV!</h2>
-          <p className="text-muted-foreground">
-            Start building your professional CV in minutes with our AI-powered editor.
-          </p>
-          <div className="flex gap-3 justify-center mt-4">
-            <Button size="lg">Create New CV</Button>
-            <Link href="/cv-preview">
-              <Button size="lg" variant="outline">
-                <Eye className="w-4 h-4 mr-2" />
-                Preview Template
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </Card>
-    </div>
-  );
+  return <DashboardClient user={user} cvs={cvs} />;
 }
 
 function DashboardSkeleton() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="w-full mx-auto py-2">
+      {/* Welcome Section */}
       <div className="mb-8 space-y-2">
-        <div className="h-9 w-64 bg-muted animate-pulse rounded" />
-        <div className="h-5 w-48 bg-muted animate-pulse rounded" />
+        <div className="h-10 w-72 bg-muted animate-pulse rounded" /> {/* Title */}
+        <div className="h-6 w-56 bg-muted animate-pulse rounded" />  {/* Email */}
       </div>
-      <Card className="p-12">
-        <div className="max-w-md mx-auto space-y-4">
-          <div className="h-16 w-16 bg-muted animate-pulse rounded-full mx-auto" />
-          <div className="h-8 w-full bg-muted animate-pulse rounded" />
-          <div className="h-5 w-3/4 bg-muted animate-pulse rounded mx-auto" />
-          <div className="h-10 w-32 bg-muted animate-pulse rounded mx-auto" />
+
+      {/* Card Skeleton */}
+      <Card className="p-12 text-center">
+        <div className="mx-auto">
+          {/* Icon */}
+          <div className="flex justify-center mb-4">
+            <div className="w-16 h-16 bg-muted animate-pulse rounded-full" />
+          </div>
+
+          {/* Title */}
+          <div className="h-8 w-64 bg-muted animate-pulse rounded mx-auto mb-3" />
+
+          {/* Description */}
+          <div className="h-5 w-80 bg-muted animate-pulse rounded mx-auto" />
+
+          {/* Buttons */}
+          <div className="flex gap-3 justify-center mt-6">
+            <div className="h-10 w-40 bg-muted animate-pulse rounded" />
+            <div className="h-10 w-40 bg-muted animate-pulse rounded" />
+          </div>
         </div>
       </Card>
     </div>
@@ -72,7 +69,9 @@ function DashboardSkeleton() {
 export default function DashboardPage() {
   return (
     <Suspense fallback={<DashboardSkeleton />}>
+      
       <DashboardContent />
+
     </Suspense>
   );
 }

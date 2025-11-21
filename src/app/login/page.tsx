@@ -7,7 +7,7 @@ import {
   FieldSeparator,
 } from '@/components/ui/field';
 import Image from 'next/image';
-import { Logo } from '@/components/ui/logo';
+import { Logo } from '@/components/logo';
 import { redirect } from 'next/navigation';
 
 export default async function LoginPage({

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Providers } from './providers';
 import { GoogleAnalytics } from '@/components/analytics/google-analytics';
+import { AnimatePresence } from "framer-motion";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -73,7 +74,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+        <AnimatePresence mode="sync">
+
+          {children}
+        </AnimatePresence>
+          </Providers>
         <GoogleAnalytics />
       </body>
     </html>
